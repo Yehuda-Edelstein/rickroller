@@ -1,7 +1,6 @@
 import urllib.request
 import re
 from pytube import YouTube
-import os
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 # use '+' signs between words as regular spaces will throw an error
