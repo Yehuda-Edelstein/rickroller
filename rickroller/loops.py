@@ -30,6 +30,10 @@ for video in os.listdir("originals"):
     new.write_videofile(f'rolls/roll_{x}.mp4')
     x = x + 1
 
+# deletes original videos to save space
+for video in os.listdir("originals"):
+    os.remove(os.path.join(f'originals/', video))
+
 # python loops.py
 # or
 # python3 loops.py

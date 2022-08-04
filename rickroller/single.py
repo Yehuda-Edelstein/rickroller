@@ -1,3 +1,4 @@
+import os
 import urllib.request
 import re
 from pytube import YouTube
@@ -28,6 +29,9 @@ original = VideoFileClip(f'originals/{search_word}.mp4').subclip(0, 5)
 rick = VideoFileClip('rick.mp4')
 new = concatenate_videoclips([original, rick])
 new.write_videofile(f'rolls/roll.mp4')
+
+# deletes original video to save space
+os.remove(os.path.join(f'originals/{search_word}.mp4'))
 
 # python single.py
 # or
