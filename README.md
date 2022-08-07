@@ -11,10 +11,13 @@ We retrieve a url from YouTube and download the video. Next, we clip the first 1
 ## Usage
 
 1. Fork and/or clone the repo
-2. `cd rickroller/rickroller`
-3. `mkdir originals rolls`
-4. Choose your `search_word` to query videos
-5. Start rolling.
+2. `python -m venv env` or `python3 -m venv env` to create a virtual enviroment
+3. `source env/bin/activate` to activate your virtual env
+4. `pip install -r requirements.txt` to install reqs
+5. `cd rickroller/rickroller`
+6. `mkdir originals rolls`
+7. Choose your `search_word` at the top of either file to query videos
+8. Start rolling.
 
 ## Nayvadius DeMun Wilburn
 
