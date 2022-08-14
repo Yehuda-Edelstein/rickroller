@@ -27,7 +27,15 @@ for video in os.listdir("originals"):
     original = VideoFileClip(f'originals/{video}').subclip(0, 5)
     rick = VideoFileClip('rick.mp4')
     new = concatenate_videoclips([original, rick])
-    new.write_videofile(f'rolls/roll_{x}.mp4')
+    new.write_videofile(
+        f'rolls/roll_{x}.mp4', 
+        # to keep video audio
+        remove_temp=True, 
+        bitrate="5000k",
+        audio=True, 
+        audio_codec="aac",
+        codec='mpeg4'
+    )
     x = x + 1
 
 # deletes original videos to save space

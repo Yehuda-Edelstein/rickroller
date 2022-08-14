@@ -28,7 +28,15 @@ print("Video was succesfully downloaded!")
 original = VideoFileClip(f'originals/{search_word}.mp4').subclip(0, 5)
 rick = VideoFileClip('rick.mp4')
 new = concatenate_videoclips([original, rick])
-new.write_videofile(f'rolls/roll.mp4')
+new.write_videofile(
+    f'rolls/roll.mp4',
+    # to keep video audio
+    remove_temp=True, 
+    bitrate="5000k",
+    audio=True, 
+    audio_codec="aac",
+    codec='mpeg4'
+)
 
 # deletes original video to save space
 os.remove(os.path.join(f'originals/{search_word}.mp4'))
